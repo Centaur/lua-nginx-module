@@ -1805,8 +1805,8 @@ subrequest and it is a normal Lua table.</seg>
       <tuv lang="EN-US">
         <seg>= Name =</seg>
       </tuv>
-      <tuv lang="ZH-CN" changedate="20130802T034722Z" changeid="xf">
-        <seg>= 名称 =</seg>
+      <tuv lang="ZH-CN" changedate="20130809T063449Z" changeid="xf">
+        <seg>= 名称-- =</seg>
       </tuv>
     </tu>
     <tu>
@@ -9475,6 +9475,14 @@ unescaping them in the Nginx config file.</seg>
       </tuv>
       <tuv lang="ZH-CN" changedate="20130802T035049Z" changeid="xf">
         <seg>本文对应的是 ngx_lua [https://github.com/chaoslawful/lua-nginx-module/tags v0.8.5]版本，发布于2013年7月8日.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This document describes ngx_lua [https://github.com/chaoslawful/lua-nginx-module/tags v0.8.6] released on 6 August 2013.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changedate="20130809T062523Z" changeid="xf">
+        <seg>本文对应的是 ngx_lua [https://github.com/chaoslawful/lua-nginx-module/tags v0.8.6]版本，发布于2013年8月6日.</seg>
       </tuv>
     </tu>
     <tu>

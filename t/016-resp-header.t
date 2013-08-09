@@ -9,7 +9,7 @@ use t::TestNginxLua;
 
 repeat_each(2);
 
-plan tests => repeat_each() * (blocks() * 3 + 2);
+plan tests => repeat_each() * (blocks() * 3 + 8);
 
 #no_diff();
 no_long_string();
@@ -658,7 +658,7 @@ Cache-Control: no-cache
             ngx.header.cache_control = { "private", "no-store" }
             ngx.header.cache_control = { "no-cache", "blah", "foo" }
             ngx.say("Cache-Control: ", ngx.var.sent_http_cache_control)
-            ngx.say("Cache-Control: ", table.concat(ngx.header.cache_control, "; "))
+            ngx.say("Cache-Control: ", table.concat(ngx.header.cache_control, ", "))
         ';
     }
 --- request
@@ -955,4 +955,95 @@ GET /read
 !Last-Modified
 --- response_body
 ok
+
+
+
+=== TEST 48: github #20: segfault caused by the nasty optimization in the nginx core (write)
+--- config
+    location = /t/ {
+        header_filter_by_lua '
+            ngx.header.foo = 1
+        ';
+        proxy_pass http://127.0.0.1:$server_port;
+    }
+--- request
+GET /t
+--- more_headers
+Foo: bar
+Bah: baz
+--- response_headers
+Location: http://localhost:$ServerPort/t/
+--- response_body_like: 301 Moved Permanently
+--- error_code: 301
+--- no_error_log
+[error]
+
+
+
+=== TEST 49: github #20: segfault caused by the nasty optimization in the nginx core (read)
+--- config
+    location = /t/ {
+        header_filter_by_lua '
+            local v = ngx.header.foo
+        ';
+        proxy_pass http://127.0.0.1:$server_port;
+    }
+--- request
+GET /t
+--- more_headers
+Foo: bar
+Bah: baz
+--- response_body_like: 301 Moved Permanently
+--- response_headers
+Location: http://localhost:$ServerPort/t/
+--- error_code: 301
+--- no_error_log
+[error]
+
+
+
+=== TEST 50: github #20: segfault caused by the nasty optimization in the nginx core (read Location)
+--- config
+    location = /t/ {
+        header_filter_by_lua '
+            ngx.header.Foo = ngx.header.location
+        ';
+        proxy_pass http://127.0.0.1:$server_port;
+    }
+--- request
+GET /t
+--- more_headers
+Foo: bar
+Bah: baz
+--- response_headers
+Location: http://localhost:$ServerPort/t/
+Foo: /t/
+--- response_body_like: 301 Moved Permanently
+--- error_code: 301
+--- no_error_log
+[error]
+
+
+
+=== TEST 51: github #20: segfault caused by the nasty optimization in the nginx core (set Foo and read Location)
+--- config
+    location = /t/ {
+        header_filter_by_lua '
+            ngx.header.Foo = 3
+            ngx.header.Foo = ngx.header.location
+        ';
+        proxy_pass http://127.0.0.1:$server_port;
+    }
+--- request
+GET /t
+--- more_headers
+Foo: bar
+Bah: baz
+--- response_headers
+Location: http://localhost:$ServerPort/t/
+Foo: /t/
+--- response_body_like: 301 Moved Permanently
+--- error_code: 301
+--- no_error_log
+[error]
 

@@ -160,3 +160,5 @@ addr2line
 hup
 theaders
 *.bak
+omegat/target/
+
