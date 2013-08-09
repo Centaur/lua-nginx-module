@@ -2847,8 +2847,8 @@ user &quot;light threads&quot; ([[#ngx.thread.spawn|ngx.thread.*]]), [[#ngx.exit
       <tuv xml:lang="EN-US">
         <seg>= Name =</seg>
       </tuv>
-      <tuv xml:lang="ZH-CN" changedate="20130809T063449Z" changeid="xf">
-        <seg>= 名称-- =</seg>
+      <tuv xml:lang="ZH-CN" changedate="20130809T071838Z" changeid="xf">
+        <seg>= 名称 =</seg>
       </tuv>
     </tu>
     <tu>
@@ -4802,14 +4802,6 @@ unescaping them in the Nginx config file.</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
-        <seg>This document describes ngx_lua [https://github.com/chaoslawful/lua-nginx-module/tags v0.8.5] released on 18 July 2013.</seg>
-      </tuv>
-      <tuv xml:lang="ZH-CN" changedate="20130802T035049Z" changeid="xf">
-        <seg>本文对应的是 ngx_lua [https://github.com/chaoslawful/lua-nginx-module/tags v0.8.5]版本，发布于2013年7月8日.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv xml:lang="EN-US">
         <seg>Use of jump in other contexts is prohibited and will throw out a Lua exception.</seg>
       </tuv>
       <tuv xml:lang="ZH-CN" changedate="20130806T102102Z" changeid="xf">
@@ -6528,6 +6520,14 @@ will not be cached either).</seg>
       </tuv>
       <tuv xml:lang="ZH-CN" changedate="20130808T065443Z" changeid="xf">
         <seg>由于数据报协议事实上是无连接的，本方法并不实际创建 &quot;连接&quot;, 只是设置远程对象的名字，以备后续的 读/写 操作使用.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>This document describes ngx_lua [https://github.com/chaoslawful/lua-nginx-module/tags v0.8.6] released on 6 August 2013.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changedate="20130809T062523Z" changeid="xf">
+        <seg>本文对应的是 ngx_lua [https://github.com/chaoslawful/lua-nginx-module/tags v0.8.6]版本，发布于2013年8月6日.</seg>
       </tuv>
     </tu>
     <tu>

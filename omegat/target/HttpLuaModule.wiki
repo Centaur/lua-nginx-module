@@ -1,4 +1,4 @@
-= 名称-- =
+= 名称 =
 
 ngx_lua - 在Nging中嵌入强大的Lua
 
@@ -10,7 +10,7 @@ ngx_lua - 在Nging中嵌入强大的Lua
 
 = 版本 =
 
-本文对应的是 ngx_lua [https://github.com/chaoslawful/lua-nginx-module/tags v0.8.5]版本，发布于2013年7月8日.
+本文对应的是 ngx_lua [https://github.com/chaoslawful/lua-nginx-module/tags v0.8.6]版本，发布于2013年8月6日.
 
 = 示例 =
 <geshi lang="nginx">

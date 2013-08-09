@@ -1805,8 +1805,8 @@ subrequest and it is a normal Lua table.</seg>
       <tuv lang="EN-US">
         <seg>= Name =</seg>
       </tuv>
-      <tuv lang="ZH-CN" changedate="20130809T063449Z" changeid="xf">
-        <seg>= 名称-- =</seg>
+      <tuv lang="ZH-CN" changedate="20130809T071838Z" changeid="xf">
+        <seg>= 名称 =</seg>
       </tuv>
     </tu>
     <tu>

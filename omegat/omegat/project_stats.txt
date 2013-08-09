@@ -1,14 +1,14 @@
-13-8-9 下午2:50
+13-8-9 下午5:28
 项目状态
 
      	  片段	   词汇	字符（不含空白字符）	字符（含空白）	
-总共：  	3288	30644	    199151	 223937	
+总共：  	3288	30644	    199152	 223938	
 剩余：  	1550	 5131	     36867	  40153	
-独特：  	2231	25852	    163615	 185023	
+独特：  	2231	25852	    163616	 185024	
 剩余独特：	 818	 3641	     27213	  29786	
 
 
 单个文件状态：
 
 文件名               	Total Segments	Remaining Segments	Unique Segments	Unique Remaining Segments	总共词汇量	剩余词汇	Unique Words	Unique Remaining Words	总字符（不含空白）	剩余字符（不含空白）	Unique Characters (without spaces)	Unique Remaining Characters (without spaces)	总字符（含空白）	保留字符（含空白）	Unique Characters (including spaces)	Unique Remaining Characters (including spaces)	
-HttpLuaModule.wiki	          3288	              1550	           2231	                      818	30644	5131	       25852	                  3641	   199151	     36867	                            163615	                                       27213	  223937	    40153	                              185023	                                         29786	
+HttpLuaModule.wiki	          3288	              1550	           2231	                      818	30644	5131	       25852	                  3641	   199152	     36867	                            163616	                                       27213	  223938	    40153	                              185024	                                         29786	
